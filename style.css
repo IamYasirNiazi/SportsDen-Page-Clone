@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+bg-grey{
+    background-color: gray;
+    opacity: .3;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+nav{
+    padding: 1rem 1rem !important;
+    margin-top: .4rem;
+}
+
+/* Hamburger for Input(Left Side) */
+.menu-items{
+    transform: translateX(-110%);
+    padding-top: 80px;
+    transition: transform 0.5s ease-in-out;
+    /* border: 2px solid green; */
+    padding-left: 20px;
+    padding-bottom: 70px;
+    width: 200px;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.menu input[type="checkbox"]:checked ~ .menu-items{
+    transform: translateX(0);
+    background: #232323;
+    color: white;
+}
+
+.menu input[type="checkbox"]{
+    height: 40px;
+    width: 32px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 5;
+    opacity: 0;
+}
+
+.menu{
+    /* border: 2px solid red; */
+    position: relative;
+}
+
+.menu-lines{
+    height: 30px;
+    width: 35px;
+    top: 8px;
+    left: 7px;
+    position: absolute;
+    z-index: 4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.line{
+    display: block;
+    background: #232323;
+    height: 4px;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.menu input[type="checkbox"]:checked ~ .menu-lines .line{
+    background: red;
+}
+
+.menu-lines .line1{
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+
+}
+
+.menu-lines .line3{
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.menu input[type="checkbox"]:checked ~ .menu-lines .line1{
+    transform: rotate(50deg);
+}
+
+.menu input[type="checkbox"]:checked ~ .menu-lines .line2{
+    background: #232323;
+}
+
+.menu input[type="checkbox"]:checked ~ .menu-lines .line3{
+    transform: rotate(-50deg);
+}
+
+
+
+
+
+
+
+
+
+
+div.container-fluid p.online{
+    font-size: 1.2rem;
+    padding: 0 .5rem;
+}
+
+nav .icon{
+    width: 8rem;
+    margin-top: -.5rem;
+}
+
+nav ul li{
+    font-size: 1.1rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+nav .mode{
+    width: 5.5rem;
+    height: 2.8rem;
+}
+
+.main-content{
+    background-color: #F3F4F7;
+    height: 100%;
+    padding: 1rem .3rem;
+}
+
+.line{
+    color: gray;
+    opacity: .1;
+    margin-top: -.1rem;
+}
+
+.main-image{
+    object-fit: cover;
+    width: 100%;
+}
+
+.live-img-btn{
+    position: absolute;
+    top: 2.5rem;
+    left: 3rem;
+    color: white;
+    background-color: #FF002B;
+
+}
+
+.live-img-viewers{
+    position: absolute;
+    top: 2.5rem;
+    left: 8.5rem;
+    color: white;
+    background-color: #00000060;
+}
+
+.sidebar a{
+    text-decoration: none;
+}
+
+/* .container-fluid .sidebar{
+    position: relative;
+    top: 6.5rem;
+    left: 0;
+} */
+
+div.email-div input{
+    background: #F9F9FB;
+    border: 1px solid transparent;
+    outline: none;
+    height: 5vh;
+
+}
+
+form div.email-div input:focus{
+    background: #F9F9FB;
+
+}
+
+.rankings a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.live-btn{
+    margin-top: -1rem;
+}
+
+.team-image{
+    background-color: #F3F4F7;
+    border-radius: 50%;
+    padding: .8rem;
+    object-fit: fill;
+    height: 80px;
+    width: 80px;
+    object-position: center center;
+}
+
+.team-logo{
+    margin-top: .5rem;
+}
+
+
+ul.listgroup1 li{
+    font-size: 1.2rem;
+    background: red;
+}
+
+.scroll-adjust{
+    height: 80vh;
+}
+
+
+
+/* Responsive Code */
+@media screen and (max-width: 850px){
+    nav .mode{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 575px){
+    nav .online{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .container-fluid .sidebar{
+        display: none;
+    }
+}
